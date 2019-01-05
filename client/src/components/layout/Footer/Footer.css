@@ -1,7 +1,8 @@
 .footer {
-    padding-top: 60px;
     background-color: rgb(204, 46, 73);
     color: white;
-    padding-left: 100px;
-    margin-bottom: 0px;
+}
+
+.navbar-text {
+    box-align: right;
 }

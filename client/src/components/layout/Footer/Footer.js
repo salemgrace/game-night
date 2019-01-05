@@ -4,7 +4,9 @@ import "./Footer.css";
 function Footer() {
     return (
         <div className="footer navbar sticky-bottom">
-             <p>Created by Salem and Powered by React</p> 
+                <p className="navbar-text">
+                    Created by Salem and Powered by React 
+                </p>
         </div>
     );
 }

@@ -1,0 +1,12 @@
+.nav {
+    display: inline-block;
+}
+
+.nav-item {
+    float: right;
+    margin: 0;
+  }
+
+  .nav-item > li {
+    float: right;
+  }
