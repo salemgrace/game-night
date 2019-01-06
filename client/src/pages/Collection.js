@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import "../App.css";
+import React, { Component } from 'react';
+import '../App.css';
+import Games from '../components/Games';
 
 class Collection extends Component {
 
@@ -7,6 +8,7 @@ class Collection extends Component {
     return (
         <div className="App-body">
             <h2>In our Collection</h2>
+            <Games />
         </div>
     );
   }
