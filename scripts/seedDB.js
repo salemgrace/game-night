@@ -3,7 +3,8 @@ const db = require("../models");
 
 mongoose.connect(
     process.env.MONGODB_URI ||
-    "mongodb://localhost/reactgames"
+    "mongodb://localhost/reactgames", 
+    { useNewUrlParser: true } 
 );
 
 const gameSeed = [
