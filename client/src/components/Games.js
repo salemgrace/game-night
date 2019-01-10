@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import API from '../utils/API';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { List, ListItem } from "../components/layout/List";
 
 class Games extends Component {
@@ -25,20 +25,15 @@ class Games extends Component {
     render() {
         return (
             <div>
-                <h3>Here are my games:</h3>
-                {this.state.games.length ? (
+                <h3>Here are all the games:</h3>
                 <List>
                     {this.state.games.map(game => (
                         <ListItem key={game._id}>
-                            <Link to={"/games/" + game._id}>
                                 {game.name} owned by {game.owner}
-                            </Link>
                         </ListItem>
                     ))}
                 </List>
-                ) : (
-                    <h3>No Results to Display</h3>
-                )}
+                    {/* <h3>No Results to Display</h3> */}
             </div>
         );
     }

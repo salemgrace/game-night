@@ -9,7 +9,11 @@ mongoose.connect(
 
 const gameSeed = [
     {
-        name: "Monopoly",
+        name: "Catch Phrase",
+        owner: "Salem"
+    },
+    {
+        name: "Imaginif",
         owner: "Salem"
     },
     {
@@ -17,8 +21,16 @@ const gameSeed = [
         owner: "Salem"
     },
     {
-        name: "Go Fish",
+        name: "Anomia",
         owner: "Malini"
+    },
+    {
+        name: "Exploding Kittens",
+        owner: "Hannah"
+    },
+    {
+        name: "Code Names",
+        owner: "Hannah"
     }
 ];
 
