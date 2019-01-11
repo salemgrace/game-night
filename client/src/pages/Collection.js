@@ -7,7 +7,7 @@ class Collection extends Component {
   render() {
     return (
         <div className="App-body">
-            <h2>In our Collection</h2>
+            <h1>All the Games in our Collection</h1>
             <Games />
         </div>
     );

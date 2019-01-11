@@ -10,27 +10,33 @@ mongoose.connect(
 const gameSeed = [
     {
         name: "Catch Phrase",
-        owner: "Salem"
+        owner: "Salem",
+        minPlayers: 2
     },
     {
         name: "Imaginif",
-        owner: "Salem"
+        owner: "Salem",
+        minPlayers: 4
     },
     {
         name: "Bingo",
-        owner: "Salem"
+        owner: "Salem",
+        minPlayers: 3
     },
     {
         name: "Anomia",
-        owner: "Malini"
+        owner: "Malini",
+        minPlayers: 4
     },
     {
         name: "Exploding Kittens",
-        owner: "Hannah"
+        owner: "Hannah",
+        minPlayers: 3
     },
     {
         name: "Code Names",
-        owner: "Hannah"
+        owner: "Hannah",
+        minPlayers: 4
     }
 ];
 

@@ -13,3 +13,14 @@
   color: white;
   margin-top: 120px;
 }
+
+.sub-shelf {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.btn {
+  padding: 50px;
+  font-size: 150%;
+  background-color: rgb(204, 46, 73);
+}
