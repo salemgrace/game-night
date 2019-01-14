@@ -9,34 +9,39 @@ mongoose.connect(
 
 const gameSeed = [
     {
-        name: "Catch Phrase",
+        title: "Catch Phrase",
         owner: "Salem",
         minPlayers: 2
     },
     {
-        name: "Imaginif",
-        owner: "Salem",
-        minPlayers: 4
-    },
-    {
-        name: "Bingo",
+        title: "Imaginiff",
         owner: "Salem",
         minPlayers: 3
     },
     {
-        name: "Anomia",
+        title: "Rummikub",
+        owner: "Salem",
+        minPlayers: 2
+    },
+    {
+        title: "Anomia",
         owner: "Malini",
-        minPlayers: 4
-    },
-    {
-        name: "Exploding Kittens",
-        owner: "Hannah",
         minPlayers: 3
     },
     {
-        name: "Code Names",
+        title: "Exploding Kittens",
+        owner: "Hannah",
+        minPlayers: 2
+    },
+    {
+        title: "Code Names",
         owner: "Hannah",
         minPlayers: 4
+    },
+    {
+        title: "Scattegories",
+        owner: "Xander",
+        minPlayers: 2
     }
 ];
 
@@ -44,7 +49,12 @@ db.Game
     .remove({})
     .then(() => db.Game.collection.insertMany(gameSeed))
     .then(data => {
-        console.log(data.result.n + " games inserted");
+        db.Owner
+            .find({}).populate({
+                path: "name",
+                select: "owner"
+            }).exec();
+        // console.log(data.result.n + " games inserted");
         process.exit(0);
     })
     .catch(err => {

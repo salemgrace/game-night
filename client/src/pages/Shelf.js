@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
+import Input from "./Input";
+import stack from "../stack-01.png";
 
 class Shelf extends Component {
 
@@ -10,21 +12,22 @@ class Shelf extends Component {
             <div className="container">
               <div className="row">
                 <div className="col sub-shelf">
-                  <button type="button" className="btn btn-success btn-lg">Hannah's Shelf</button>
+                  <img src={stack} alt="stack" />
                 </div>
                 <div className="col sub-shelf">
-                  <button type="button" className="btn btn-success btn-lg">Malini's Shelf</button>              
+                <img src={stack} alt="stack" />
                 </div>
               </div>
               <div className="row">
                 <div className="col sub-shelf">
-                  <button type="button" className="btn btn-success btn-lg">Salem's Shelf</button>
+                <img src={stack} alt="stack" />
                 </div>
                 <div className="col sub-shelf">
-                  <button type="button" className="btn btn-success btn-lg">Xander's Shelf</button>
+                <img src={stack} alt="stack" />
                 </div>
               </div>
             </div>
+            <Input />
         </div>
     );
   }

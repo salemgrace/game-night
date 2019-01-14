@@ -18,7 +18,7 @@ const NavBar = props => (
                                     : "nav-link"
                             }
                         >
-                            Shelf
+                            Each Shelf
                         </Link>
                         </li>
                     <li className="nav-item">
@@ -30,7 +30,7 @@ const NavBar = props => (
                                 : "nav-link"
                             }
                         >
-                            Collection
+                            Entire Collection
                         </Link>
                     </li>
                     <li className="nav-item">

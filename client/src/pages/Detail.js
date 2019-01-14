@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import { Link } from "react-router-dom";
 
 class Detail extends Component {
     state = {
@@ -9,19 +10,24 @@ class Detail extends Component {
     componentDidMount() {
         API.getGame(this.props.match.params.id)
             .then(res => this.setState({ game: res.data }))
-            // .then(console.log("what's in game?" + game))
             .catch(err => console.log(err));
     }
 
     render() {
         return (
-            <div>
+            <div className="App-body">
                 <h1>
-                    {this.state.game.name}
+                    {this.state.game.title}
                 </h1>
                 <h3>
-                    {this.state.game.minPlayers}
+                    Needs at least {this.state.game.minPlayers} Players
                 </h3>
+                <h3>
+                    Owned by: {this.state.game.owner}
+                </h3>
+                <Link to="/collection">
+                    <button type="button" className="btn btn-success">Back to All Games</button>
+                </Link>
             </div>
         );
     }

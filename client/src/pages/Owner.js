@@ -1,30 +1,23 @@
-import React, { Component } from 'react';
-import API from '../utils/API';
+import React, { Component } from "react";
+import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../components/layout/List";
 
-class Games extends Component {
+
+class Detail extends Component {
     state = {
-        games: []
+        game: {}
     };
 
     componentDidMount() {
-        this.loadGames();
-    }
-
-    loadGames = () => {
-        console.log("getting API request");
-        API.getGames()
-            .then(res => {
-                console.log("RES: ", res.data)
-                this.setState({ games: res.data })
-            })
+        API.getGame(this.props.match.params.id)
+            .then(res => this.setState({ game: res.data }))
             .catch(err => console.log(err));
-    };
+    }
 
     render() {
         return (
-            <div>
+            <div className="App-body">
             {this.state.games.length ? (
                 <List>
                     {this.state.games.map(game => (
@@ -35,12 +28,15 @@ class Games extends Component {
                         </ListItem>
                     ))}
                 </List>
-            ) : (
+            ) :(
                 <h3>No Results to Display</h3>
             )}
+                <Link to="/collection">
+                    <button type="button" className="btn btn-success">Back to All Owners</button>
+                </Link>
             </div>
         );
     }
 }
 
-export default Games;
+export default Detail;
