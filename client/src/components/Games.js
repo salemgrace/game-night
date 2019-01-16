@@ -24,7 +24,7 @@ class Games extends Component {
 
     render() {
         return (
-            <div>
+            <div className="section">
             {this.state.games.length ? (
                 <List>
                     {this.state.games.map(game => (

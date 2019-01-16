@@ -1,7 +1,6 @@
 .list-overflow-container {
   max-height: 545px;
   border: 1px rgb(204, 46, 73);
-  border-radius: 4px;
   padding-top: 40px;
 }
 
@@ -10,10 +9,9 @@
 }
 
 .list-overflow-container li {
-  border-radius: 0px;
   border-left: none;
   border-right: none;
-  background: rgb(204, 46, 73);
+  background: lightgray;
   margin: 5px;
 }
 
@@ -21,3 +19,7 @@
   color: white;
 }
 
+.list-group-item {
+  color: white;
+  font-display: bold;
+}

@@ -12,6 +12,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
   padding-top: 170px;
+  padding-bottom: 40px;
 }
 
 .sub-shelf {
@@ -27,4 +28,12 @@
 .btn-lg {
   padding: 50px;
   font-size: 150%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
 }
