@@ -45,4 +45,8 @@
   .card > .remove:hover {
     color: #d50000;
   }
+
+  .content {
+    color: pink;
+  }
   

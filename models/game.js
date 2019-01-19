@@ -2,9 +2,18 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const gameSchema = new Schema({
-    owner: { type: Schema.Types.ObjectId, ref: "Owner" },
-    title: { type: String, required: true },
-    minPlayers: { type: Number }
+    owners: [{ 
+        type: Schema.Types.ObjectId, 
+        ref: "Owner" 
+    }],
+    title: { 
+        type: String, 
+        required: true,
+        unique: true
+    },
+    minPlayers: { 
+        type: Number 
+    }
 });
 
 const Game = mongoose.model("Game", gameSchema);

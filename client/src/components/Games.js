@@ -13,10 +13,10 @@ class Games extends Component {
     }
 
     loadGames = () => {
-        console.log("getting API request");
+        console.log("getting games API request");
         API.getGames()
             .then(res => {
-                console.log("RES: ", res.data)
+                console.log("games res: ", res.data)
                 this.setState({ games: res.data })
             })
             .catch(err => console.log(err));

@@ -26,7 +26,7 @@ class Detail extends Component {
                     Owned by: {this.state.game.owner}
                 </h3>
                 <Link to="/collection">
-                    <button type="button" className="btn btn-success">Back to All Games</button>
+                    <button type="button" className="btn btn-secondary">Back to All Games</button>
                 </Link>
             </div>
         );

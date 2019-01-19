@@ -1,8 +1,8 @@
 import React from 'react';
-import "./GameCard.css";
+import "./OwnerCard.css";
 import stack from "../../../stack-01.png";
 
-const GameCard = props => (
+const OwnerCard = props => (
     <div className="card">
         <div className="img-container">
             <img alt={props.name} src={stack} />
@@ -15,4 +15,4 @@ const GameCard = props => (
     </div>
 );
 
-export default GameCard;
+export default OwnerCard;
