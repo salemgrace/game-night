@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../App.css";
 import Input from "./Input";
 import Owners from "../components/Owners";
-// import stack from "../stack-01.png";
 
 class Shelf extends Component {
 

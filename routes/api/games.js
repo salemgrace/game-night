@@ -5,6 +5,6 @@ router.route("/")
     .get(gamesController.findAllGames)
 
 router.route("/:id")
-    .get(gamesController.findById);
+    .get(gamesController.findGameById);
 
 module.exports = router;

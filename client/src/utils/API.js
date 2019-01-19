@@ -19,5 +19,8 @@ export default {
   },
   getOwners: function() {
     return axios.get("/api/owners")
+  },
+  getOwner: function(id) {
+    return axios.get("/api/owners/" + id)
   }
 };

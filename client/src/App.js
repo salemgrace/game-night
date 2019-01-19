@@ -7,7 +7,8 @@ import Shelf from './pages/Shelf';
 import About from './pages/About';
 import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
-import Detail from './pages/Detail'
+import Detail from './pages/Detail';
+import GamesByOwner from './pages/GamesByOwner';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/collection" component={Collection} />
           <Route exact path="/about" component={About} />
           <Route exact path="/games/:id" component={Detail} />
+          <Route exact path="/owners/:id" component={GamesByOwner} />
         </Switch>
         <Footer />
       </div>

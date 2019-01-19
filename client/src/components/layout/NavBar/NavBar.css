@@ -5,6 +5,7 @@
 .nav-item {
     float: right;
     margin: 0;
+    text-align: center;
   }
 
   .nav-item > li {

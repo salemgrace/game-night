@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import API from '../utils/API';
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../components/layout/List";
+import Wrapper from "../components/layout/Wrapper"
 
 class Games extends Component {
     state = {
@@ -24,7 +25,7 @@ class Games extends Component {
 
     render() {
         return (
-            <div className="section">
+            <Wrapper>
             {this.state.games.length ? (
                 <List>
                     {this.state.games.map(game => (
@@ -38,7 +39,7 @@ class Games extends Component {
             ) : (
                 <h3>No Results to Display</h3>
             )}
-            </div>
+            </Wrapper>
         );
     }
 }

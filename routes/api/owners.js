@@ -4,7 +4,7 @@ const gamesController = require("../../controllers/gamesController");
 router.route("/")
     .get(gamesController.findAllOwners)
 
-// router.route("/:id")
-//     .get(gamesController.findById);
+router.route("/:id")
+    .get(gamesController.findOwnerById);
 
 module.exports = router;
