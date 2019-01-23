@@ -6,6 +6,14 @@ var malini_id = mongoose.Types.ObjectId();
 var hannah_id = mongoose.Types.ObjectId();
 var xander_id = mongoose.Types.ObjectId();
 
+var game_one = mongoose.Types.ObjectId();
+var game_two = mongoose.Types.ObjectId();
+var game_three = mongoose.Types.ObjectId();
+var game_four = mongoose.Types.ObjectId();
+var game_five = mongoose.Types.ObjectId();
+var game_six = mongoose.Types.ObjectId();
+var game_seven = mongoose.Types.ObjectId();
+
 mongoose.connect(
     process.env.MONGODB_URI ||
     "mongodb://localhost/reactgames", 
@@ -65,36 +73,43 @@ mongoose.connect(
 
 const gameSeed = [
     {
+        _id: game_one,
         title: "Catch Phrase",
         owner: salem_id,
         minPlayers: 2
     },
     {
+        _id: game_two,
         title: "Imaginiff",
         owner: salem_id,
         minPlayers: 3
     },
     {
+        _id: game_three,
         title: "Rummikub",
         owner: salem_id,
         minPlayers: 2
     },
     {
+        _id: game_four,
         title: "Anomia",
         owner: malini_id,
         minPlayers: 3
     },
     {
+        _id: game_five,
         title: "Exploding Kittens",
         owner: hannah_id,
         minPlayers: 2
     },
     {
+        _id: game_six,
         title: "Code Names",
         owner: hannah_id,
         minPlayers: 4
     },
     {
+        _id: game_seven,
         title: "Scattegories",
         owner: xander_id,
         minPlayers: 2
@@ -105,22 +120,22 @@ const ownerSeed =[
     {
         _id: xander_id,
         name: "Xander",
-        games: []
+        games: [game_seven]
     },
     {
         _id: hannah_id,
         name: "Hannah",
-        games: []
+        games: [game_five, game_six]
     },
     {
         _id: salem_id,
         name: "Salem",
-        games: []
+        games: [game_one, game_two, game_three]
     },
     {
         _id: malini_id,
         name: "Malini",
-        games: []
+        games: [game_four]
     }
 ];
 

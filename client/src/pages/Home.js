@@ -8,23 +8,19 @@ class Home extends Component {
       <div className="App-body">
         <h1>So you want to play a game?</h1>
           <div className="card">
-            <div className="card-header">
-              <h3>Let's get started...</h3>
-            </div>
+              <h4 className="card-header">Let's get started...</h4>
             <div className="card-body">
-            <div className="form-group row">
-              <div className="col-sm-10">
-                <label htmlFor="formGroupExampleInput">Email</label>
+              <div className="form-group row">
+                <h5><label htmlFor="formGroupExampleInput" className="col-form-label">Email</label></h5>
                 <input type="email" className="form-control" placeholder="Email" />
-              </div>
             </div>
             <div className="form-group row">
-              <div className="col-sm-10">
-              <label htmlFor="formGroupExampleInput">Password</label>
+                <h5><label htmlFor="formGroupExampleInput" className="col-form-label">Password</label></h5>
                 <input type="password" className="form-control" placeholder="Password" />
-              </div>
             </div>
+            <div className="form-group row">
             <button type="button" className="btn btn-secondary">Submit</button>
+            </div>
             </div>
           </div>
         </div>

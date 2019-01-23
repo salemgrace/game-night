@@ -17,9 +17,9 @@ class GamesByOwner extends Component {
     loadGames = () => {
         API.getOwner(this.props.match.params.id)
             .then(res => {
-                console.log("individual owner: " + res )
-                console.log("owner's games: ")
-                this.setState({ owner: res.data, games: res })
+                console.log("individual owner: " + res.data.name )
+                console.log("owner's games: " + res.data.games)
+                this.setState({ owner: res.data, games: res.data.games })
             })
             .catch(err => console.log(err));
     }
@@ -35,7 +35,9 @@ class GamesByOwner extends Component {
                         <List>
                             {this.state.games.map(game => (
                                 <ListItem key={game._id}>
-                                    {game.title}
+                                    <Link to={"/games/" + game._id}>
+                                        {game.title}
+                                    </Link>
                                 </ListItem>
                             ))}
                         </List>
@@ -43,9 +45,49 @@ class GamesByOwner extends Component {
                         <h3>No Results to Display</h3>
                     )}
                 </Wrapper>
-                <Link to="/collection">
-                    <button type="button" className="btn btn-secondary">Back to All Games</button>
+                <Link to="/shelf">
+                    <button type="button" className="btn btn-secondary">Back to Owners by Shelf</button>
                 </Link>
+                <div className="sub-shelf">
+                    <div className="card">
+                        <h4 className="card-header">Add a game to {this.state.owner.name}'s Shelf</h4>
+                        <div className="card-body">
+                            <form>
+                                <div className="form-group row">
+                                    <h5><label htmlFor="inputTitle" className="col-form-label">Title of Game</label></h5>
+                                    <input type="text" className="form-control" />
+                                </div>
+                                <div className="form-group row">
+                                    <h5><label htmlFor="numPlayersInput">Select Min Number of Players</label></h5>
+                                    <select className="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                    </select>
+                                </div>
+                                <div className="form-group row">
+                                    <h5><label htmlFor="numPlayersInput">Select Max Number of Players</label></h5>
+                                    <select className="form-control">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                    </select>
+                                </div>
+                                <div className="form-group row">
+                                    <button type="button" className="btn btn-secondary">Add Game</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }

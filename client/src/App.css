@@ -27,23 +27,18 @@
   font-size: 150%;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-
-h1, h2, h3 {
-  font-family: 'Merriweather', serif;
-}
-
 .card {
   margin-top: 30px;
-  text-align: center;
+  background: lightgray;
 }
 
 .card-body {
-  background: grey;
+  background: lightgray;
+  color: rgb(34, 34, 34);
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .card-header {
-  background: black;
+  background-color: #EB6864
 }

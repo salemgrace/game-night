@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const gameSchema = new Schema({
+    _id: Schema.Types.ObjectId,
     owner: { 
         type: Schema.Types.ObjectId, 
         ref: "Owner" 

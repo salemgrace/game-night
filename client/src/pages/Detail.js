@@ -20,18 +20,18 @@ class Detail extends Component {
     render() {
         return (
             <div className="App-body">
-                <h1>
-                    {this.state.game.title}
-                </h1>
-                <h3>
-                    Needs at least {this.state.game.minPlayers} Players
-                </h3>
-                <h3>
-                    Owned by: {this.state.owner.name}
-                </h3>
-                <Link to="/collection">
-                    <button type="button" className="btn btn-secondary">Back to All Games</button>
-                </Link>
+                <div className="card">
+                    <h2 className="card-header">
+                        {this.state.game.title}
+                    </h2>
+                    <div className="card-body">
+                        <h5 className="list-group-item">Needs at least {this.state.game.minPlayers} Players</h5>
+                        <h5 className="list-group-item">Owned by: {this.state.owner.name}</h5>
+                        <Link to="/collection">
+                            <button type="button" className="btn btn-secondary">Back to All Games</button>
+                        </Link>
+                    </div>
+                </div>
             </div>
         );
     }

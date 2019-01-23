@@ -9,6 +9,7 @@ import NavBar from './components/layout/NavBar';
 import Footer from './components/layout/Footer';
 import Detail from './pages/Detail';
 import GamesByOwner from './pages/GamesByOwner';
+import Input from './pages/Input';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/shelf" component={Shelf} />
           <Route exact path="/collection" component={Collection} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/addgame" component={Input} />
           <Route exact path="/games/:id" component={Detail} />
           <Route exact path="/owners/:id" component={GamesByOwner} />
         </Switch>

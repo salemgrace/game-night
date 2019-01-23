@@ -18,7 +18,7 @@ const NavBar = props => (
                                     : "nav-link"
                             }
                         >
-                            Each Shelf
+                            Owner Shelves
                         </Link>
                         </li>
                     <li className="nav-item">
@@ -30,9 +30,21 @@ const NavBar = props => (
                                 : "nav-link"
                             }
                         >
-                            Entire Collection
+                            Game Collection
                         </Link>
                     </li>
+                    {/* <li className="nav-item">
+                        <Link
+                            to="/addgame"
+                            className={
+                                window.location.pathname === "/addgame"
+                                    ? "nav-link active"
+                                    : "nav-link"
+                            }
+                        >
+                            Add a Game
+                        </Link>
+                        </li> */}
                     <li className="nav-item">
                         <Link
                             to="/about"
