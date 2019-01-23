@@ -5,6 +5,7 @@ module.exports = {
         console.log("in the findall games");
         db.Game
             .find(req.query)
+            .populate("owner")
             .sort({ title: 1 })
             .then(dbGame => res.json(dbGame))
             .catch(err => res.status(400).json(err));
@@ -23,13 +24,16 @@ module.exports = {
     },
     findGameById: function(req, res) {
         db.Game
-          .findById(req.params.id)
-          .then(dbGame => res.json(dbGame))
-          .catch(err => res.status(422).json(err));
+            .findById(req.params.id)
+            .populate("owner")
+            .then(dbGame => res.json(dbGame))
+            .catch(err => res.status(422).json(err));
       },
     findOwnerById: function(req, res) {
+        console.log("in the individual owner")
         db.Owner
           .findById(req.params.id)
+          .populate("games")
           .then(dbOwner => res.json(dbOwner))
           .catch(err => res.status(422).json(err));
     }

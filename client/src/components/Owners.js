@@ -4,6 +4,7 @@ import OwnerCard from "../components/layout/OwnerCard";
 import Wrapper from "../components/layout/Wrapper";
 import { Link } from "react-router-dom";
 import "../App.css";
+import { ListItem } from "./layout/List";
 
 class Owners extends Component {
   state = {
@@ -28,15 +29,17 @@ class Owners extends Component {
     return (
       <Wrapper>
         {this.state.owners.map(owner => (
-          <OwnerCard
-            id={owner._id}
-            key={owner._id}
-            owner={owner.name}
-          >
-            <Link to={"/owners/" + owner._id}>
+          <ListItem key={owner._id}>
+          <Link to={"/owners/" + owner._id}>  
+            <OwnerCard
+              id={owner._id}
+              key={owner._id}
+              owner={owner.name}
+            >
               {owner.name}
+            </OwnerCard>
             </Link>
-          </OwnerCard>
+            </ListItem>
         ))}
       </Wrapper>
     );

@@ -2,6 +2,8 @@
   max-height: 545px;
   border: 1px rgb(204, 46, 73);
   padding-top: 40px;
+  margin: 1rem;
+  position: relative;
 }
 
 .list-overflow-container ul {
@@ -16,11 +18,14 @@
 }
 
 .list-group {
-  color: white;
+  margin: 1rem;
+  position: relative;
+  text-align: center;
 }
 
 .list-group-item {
-  color: white;
   font-display: bold;
   text-align: center;
+  background: transparent;
+  border: none;
 }
