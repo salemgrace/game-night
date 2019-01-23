@@ -1,6 +1,6 @@
 import React from 'react';
 import "./OwnerCard.css";
-import stack from "../../../stack-01.png";
+import stack from "../../../stack-01.svg";
 
 const OwnerCard = props => (
     <div className="card owner-background">
@@ -8,7 +8,7 @@ const OwnerCard = props => (
             <img alt={props.name} src={stack} />
         </div>
         <div classame="content">
-                {props.owner}
+            <h4 className="owner-text">{props.owner}</h4>
         </div>
     </div>
 );
