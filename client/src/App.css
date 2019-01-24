@@ -13,7 +13,7 @@
 
 .sub-shelf {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   text-align: center;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .bootstrap-image {
-  width: 20%;
+  width: 10%;
 }
 
 body, h1, h2, h3 {
