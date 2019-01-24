@@ -26,6 +26,7 @@ class Players extends Component {
     render() {
         return (
             <div className="App-body">
+            <h1>Comming Soon: Viewing by Number of Players!</h1>
             <Wrapper>
             {this.state.games.length ? (
                 <List>
