@@ -27,57 +27,6 @@ mongoose.connect(
     { useNewUrlParser: true } 
 );
 
-// const gameSeed = [
-//     {
-//         name: "Salem",
-//         games: [
-//             {
-//                 title: "Catch Phrase",
-//                 minPlayers: 2
-//             },
-//             {
-//                 title: "Imaginiff",
-//                 minPlayers: 3
-//             },
-//             {
-//                 title: "Rummikub",
-//                 minPlayers: 2
-//             }
-//         ]
-//     },
-//     {   
-//         name: "Malini",
-//         games: [
-//             {
-//                 title: "Anomia",
-//                 minPlayers: 3
-//             }
-//         ]
-//     },
-//     {
-//         name: "Hannah",
-//         games: [
-//             {
-//                 title: "Exploding Kittens",
-//                 minPlayers: 2
-//             },
-//             {
-//                 title: "Code Names",
-//                 minPlayers: 4
-//             }
-//         ]
-//     },
-//     {
-//         name: "Xander",
-//         games: [
-//             {
-//                 title: "Scattegories",
-//                 minPlayers: 2
-//             }
-//         ]
-//     }
-// ];
-
 const gameSeed = [
     {
         _id: game_one,
