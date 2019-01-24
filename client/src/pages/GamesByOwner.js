@@ -54,11 +54,11 @@ class GamesByOwner extends Component {
                         <div className="card-body">
                             <form>
                                 <div className="form-group row">
-                                    <h5><label htmlFor="inputTitle" className="col-form-label">Title of Game</label></h5>
+                                    <h6><label htmlFor="inputTitle" className="col-form-label">Title of Game</label></h6>
                                     <input type="text" className="form-control" />
                                 </div>
                                 <div className="form-group row">
-                                    <h5><label htmlFor="numPlayersInput">Select Min Number of Players</label></h5>
+                                    <h6><label htmlFor="numPlayersInput">Select Min Number of Players</label></h6>
                                     <select className="form-control">
                                         <option>1</option>
                                         <option>2</option>
@@ -69,7 +69,7 @@ class GamesByOwner extends Component {
                                     </select>
                                 </div>
                                 <div className="form-group row">
-                                    <h5><label htmlFor="numPlayersInput">Select Max Number of Players</label></h5>
+                                    <h6><label htmlFor="numPlayersInput">Select Max Number of Players</label></h6>
                                     <select className="form-control">
                                         <option>1</option>
                                         <option>2</option>

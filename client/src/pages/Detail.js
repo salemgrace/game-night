@@ -21,12 +21,12 @@ class Detail extends Component {
         return (
             <div className="App-body">
                 <div className="card">
-                    <h2 className="card-header">
+                    <h3 className="card-header">
                         {this.state.game.title}
-                    </h2>
+                    </h3>
                     <div className="card-body">
-                        <h5 className="list-group-item">Needs at least {this.state.game.minPlayers} Players</h5>
-                        <h5 className="list-group-item">Owned by: {this.state.owner.name}</h5>
+                        <h6 className="list-group-item">Needs at least {this.state.game.minPlayers} Players</h6>
+                        <h6 className="list-group-item">Owned by: {this.state.owner.name}</h6>
                         <Link to="/collection">
                             <button type="button" className="btn btn-secondary">Back to All Games</button>
                         </Link>

@@ -1,6 +1,6 @@
 .App-body {
   background-color: #282c34;
-  min-height: 95vh;
+  min-height: 93vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,4 +41,43 @@
 
 .card-header {
   background-color: #EB6864
+}
+
+.react-image {
+  width: 20%;
+}
+
+.mongo-image {
+  width: 20%;
+  padding-right: 5%;
+}
+
+.multi-image {
+  width: 35%;
+  padding-left: 10%;
+}
+
+.node-image {
+  padding-left: 5%;
+  width: 20%
+}
+
+.bootstrap-image {
+  width: 20%;
+}
+
+body, h1, h2, h3 {
+  font-size: 200%;
+}
+
+h4, h5 {
+  font-size: 125%;
+}
+
+h6 {
+  font-size: 25px;
+}
+
+.about-padding {
+  padding: 10px;
 }

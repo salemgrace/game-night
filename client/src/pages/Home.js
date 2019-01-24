@@ -6,8 +6,10 @@ class Home extends Component {
   render() {
     return (
       <div className="App-body">
-        <h1>So you want to play a game?</h1>
-          <div className="card">
+        <div className="sub-shelf about-padding">
+          <h1>So you want to play a game?</h1>
+        </div>
+          {/* <div className="card">
               <h4 className="card-header">Let's get started...</h4>
             <div className="card-body">
               <div className="form-group row">
@@ -22,7 +24,7 @@ class Home extends Component {
             <button type="button" className="btn btn-secondary">Submit</button>
             </div>
             </div>
-          </div>
+          </div> */}
         </div>
     );
   }
