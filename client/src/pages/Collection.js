@@ -13,8 +13,7 @@ class Collection extends Component {
               All Games
             </a>
             <a href="/shelf" className="list-group-item list-group-item-action">View By Owner</a>
-            <a href="/shelf" className="list-group-item list-group-item-action">View by Number of Players</a>
-
+            <a href="/players" className="list-group-item list-group-item-action">View by Number of Players</a>
           </div>
         <Games />
       </div>

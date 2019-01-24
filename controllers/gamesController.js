@@ -36,6 +36,22 @@ module.exports = {
           .populate("games")
           .then(dbOwner => res.json(dbOwner))
           .catch(err => res.status(422).json(err));
+    },
+    createGame: function(req, res) {
+        console.log("creating game")
+        db.Game
+            .create(req.body)
+            .populate("owner")
+            .then(dbGame => res.json(dbGame))
+            .catch(err => res.status(422).json(err));
+    },
+    findGamesByPlayers: function(req, res) {
+        console.log("creating game")
+        db.Game
+            .find({ minPlayers: { $gt: req.query } })
+            .populate("owner")
+            .then(dbGame => res.json(dbGame))
+            .catch(err => res.status(422).json(err));
     }
     // populateGames: function(req, res) {
     //     db.Owner

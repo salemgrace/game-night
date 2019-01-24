@@ -81,3 +81,11 @@ h6 {
 .about-padding {
   padding: 10px;
 }
+
+.number-button {
+  width: 200px;
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 200%;
+  margin-bottom: 5px;
+}

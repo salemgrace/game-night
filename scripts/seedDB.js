@@ -13,6 +13,13 @@ var game_four = mongoose.Types.ObjectId();
 var game_five = mongoose.Types.ObjectId();
 var game_six = mongoose.Types.ObjectId();
 var game_seven = mongoose.Types.ObjectId();
+var game_eight = mongoose.Types.ObjectId();
+var game_nine = mongoose.Types.ObjectId();
+var game_ten = mongoose.Types.ObjectId();
+var game_eleven = mongoose.Types.ObjectId();
+var game_twelve = mongoose.Types.ObjectId();
+var game_thirteen = mongoose.Types.ObjectId();
+var game_fourteen = mongoose.Types.ObjectId();
 
 mongoose.connect(
     process.env.MONGODB_URI ||
@@ -113,6 +120,48 @@ const gameSeed = [
         title: "Scattegories",
         owner: xander_id,
         minPlayers: 2
+    },
+    {
+        _id: game_eight,
+        title: "Quick Wits",
+        owner: malini_id,
+        minPlayers: 3
+    },
+    {
+        _id: game_nine,
+        title: "5 Second Rule",
+        owner: malini_id,
+        minPlayers: 3
+    },
+    {
+        _id: game_ten,
+        title: "I should have known that!",
+        owner: malini_id,
+        minPlayers: 4
+    },
+    {
+        _id: game_eleven,
+        title: "What do you meme?",
+        owner: malini_id,
+        minPlayers: 4
+    },
+    {
+        _id: game_twelve,
+        title: "Would you Rather...",
+        owner: salem_id,
+        minPlayers: 3
+    },
+    {
+        _id: game_thirteen,
+        title: "Team Trivial Pursuit",
+        owner: salem_id,
+        minPlayers: 4
+    },
+    {
+        _id: game_fourteen,
+        title: "Pandemic",
+        owner: salem_id,
+        minPlayers: 4
     }
 ];
 
@@ -130,12 +179,12 @@ const ownerSeed =[
     {
         _id: salem_id,
         name: "Salem",
-        games: [game_one, game_two, game_three]
+        games: [game_one, game_two, game_three, game_twelve, game_thirteen, game_fourteen]
     },
     {
         _id: malini_id,
         name: "Malini",
-        games: [game_four]
+        games: [game_four, game_eight, game_nine, game_ten, game_eleven]
     }
 ];
 

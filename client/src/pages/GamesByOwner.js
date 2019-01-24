@@ -3,11 +3,14 @@ import API from "../utils/API";
 import { Link } from "react-router-dom";
 import Wrapper from "../components/layout/Wrapper";
 import { List, ListItem } from "../components/layout/List";
+import { Input, DropDown, FormBtn } from "../components/layout/Form";
 
 class GamesByOwner extends Component {
     state = {
         owner: {},
-        games: []
+        games: [],
+        title: "",
+        minPlayers: ""
     };
 
     componentDidMount() {
@@ -23,6 +26,28 @@ class GamesByOwner extends Component {
             })
             .catch(err => console.log(err));
     }
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+            [name]: value
+        });
+    };
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        if (this.state.title && this.state.minPlayers) {
+            API.saveGame({
+                title: this.state.title,
+                minPlayers: this.state.minPlayers
+            })
+                .then(res => {
+                    console.log("in handle form submit: ", res);
+                    this.loadGames()
+                })
+                .catch(err => console.log(err));
+        }
+    };
 
     render() {
         return (
@@ -53,37 +78,22 @@ class GamesByOwner extends Component {
                         <h4 className="card-header">Add a game to {this.state.owner.name}'s Shelf</h4>
                         <div className="card-body">
                             <form>
-                                <div className="form-group row">
-                                    <h6><label htmlFor="inputTitle" className="col-form-label">Title of Game</label></h6>
-                                    <input type="text" className="form-control" />
-                                </div>
-                                <div className="form-group row">
-                                    <h6><label htmlFor="numPlayersInput">Select Min Number of Players</label></h6>
-                                    <select className="form-control">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                    </select>
-                                </div>
-                                <div className="form-group row">
-                                    <h6><label htmlFor="numPlayersInput">Select Max Number of Players</label></h6>
-                                    <select className="form-control">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                        <option>7</option>
-                                        <option>8</option>
-                                    </select>
-                                </div>
-                                <div className="form-group row">
-                                    <button type="button" className="btn btn-secondary">Add Game</button>
-                                </div>
+                                <Input 
+                                    value={this.state.title}
+                                    onChange={this.handleInputChange}
+                                    name="title"
+                                />
+                                <DropDown
+                                    value={this.state.minPlayers}
+                                    onChange={this.handleInputChange}
+                                    name="minplayers"
+                                />
+                                <FormBtn
+                                    disabled={!(this.state.title)}
+                                    onClick={this.handleFormSubmit}
+                                >
+                                Add Game
+                                </FormBtn>
                             </form>
                         </div>
                     </div>

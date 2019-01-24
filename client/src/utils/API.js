@@ -22,5 +22,8 @@ export default {
   },
   getOwner: function(id) {
     return axios.get("/api/owners/" + id)
+  },
+  getPlayers: function(number) {
+    return axios.get("/api/players/" + number)
   }
 };

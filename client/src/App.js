@@ -10,7 +10,8 @@ import Footer from './components/layout/Footer';
 import Detail from './pages/Detail';
 import GamesByOwner from './pages/GamesByOwner';
 import Input from './pages/Input';
-
+import NumPlayers from './pages/NumPlayers';
+import Players from './components/Players';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Route exact path="/addgame" component={Input} />
           <Route exact path="/games/:id" component={Detail} />
           <Route exact path="/owners/:id" component={GamesByOwner} />
+          <Route exact path="/players" component={NumPlayers} />
+          <Route exact path="/players/:minPlayers" component={Players} />
         </Switch>
         <Footer />
       </div>
