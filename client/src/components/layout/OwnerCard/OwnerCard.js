@@ -1,6 +1,6 @@
 import React from 'react';
 import "./OwnerCard.css";
-import stack from "../../../stack-01.svg";
+import stack from "../../../images/stack-01.svg";
 
 const OwnerCard = props => (
     <div className="card owner-background">

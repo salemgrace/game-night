@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import '../App.css';
-import ReactImage from '../1000px-React-icon.svg.png';
-import MongoImage from '../mongodb-logo.png';
-import MultiLogo from "../html-js-css-logos.png";
-import Node from "../nodejs-new-pantone-white.png";
-import Bootstrap from "../bootstrap-logo.png";
+import ReactImage from '../images/1000px-React-icon.svg.png';
+import MongoImage from '../images/mongodb-logo.png';
+import MultiLogo from "../images/html-js-css-logos.png";
+import Node from "../images/nodejs-new-pantone-white.png";
+import Bootstrap from "../images/bootstrap-logo.png";
 
 class About extends Component {
 
